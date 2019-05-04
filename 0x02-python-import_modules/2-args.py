@@ -6,6 +6,7 @@ if __name__ == "__main__":
 
     if len(sys.argv) - 1 == 0:
         print("{} arguments.".format(ac))
+        exit()
 
     if len(sys.argv) - 1 == 1:
         print("{} argument:".format(ac))
