@@ -1,0 +1,22 @@
+>>> text_integer = __import__('5-text_integer').text_integer
+
+>>> text_indentation('Holberton School.')
+Holberton
+<BLANKLINE>
+School.
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation(88)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation('I wish I was a real boy!')
+I wish I was a real boy!
+>>> text_indentation(Summer! It's right around ... the? corner.)
+Summer!
+It's right around
+.
+.
+.
+the?
+corner.
