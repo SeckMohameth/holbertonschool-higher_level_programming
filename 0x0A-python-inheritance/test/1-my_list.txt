@@ -1,0 +1,12 @@
+>>> my_list = __import__('1-my_list').my_lit
+
+>>> my_list.print_sorted()
+[1, 4, 2, 3, 5]
+[1, 2, 3, 4, 5]
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted(e)
+Traceback (most recent call last):
+NameError: name 'e' is not defined
+>>> my_list.print_sorted('hello')
+Traceback (most recent call last):
+TypeError: print_sorted() takes 1 positional argument but 2 were given
