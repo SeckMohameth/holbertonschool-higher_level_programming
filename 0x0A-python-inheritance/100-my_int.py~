@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+"""Class of MyInt inheritance of int"""
+
 class MyInt(int):
+
+
+"""Returns false using is not"""
+
     def __eq__(self, other):
         return int(self) is not other
 
+"""Returns True with using is"""
     def __ne__(self, other):
         return int(self) is other
