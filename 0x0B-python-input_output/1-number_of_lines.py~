@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+def number_of_lines(filename=""):
+    with open("my_file_0.txt", encoding="utf-8") as myFile:
+        print(myFile.readline())
