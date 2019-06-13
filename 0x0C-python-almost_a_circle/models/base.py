@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 class Base:
+    "Class Base"
     __nb_objects = 0
 
     def __init__(self, id=None):
-
+        "setting up init method"
         if id is not None:
             self.id = id
         else:
