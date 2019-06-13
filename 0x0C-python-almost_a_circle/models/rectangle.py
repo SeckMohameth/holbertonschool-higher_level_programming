@@ -2,6 +2,7 @@
 """Model rectangle"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectanle class
 
@@ -34,9 +35,6 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-
-
-
     @property
     def height(self):
         """ height getter """
@@ -52,8 +50,6 @@ class Rectangle(Base):
         else:
             self.__height = value
 
-
-
     @property
     def x(self):
         """ getter for x"""
@@ -62,13 +58,12 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """ setter for x"""
-        if value < 0            raise ValueError("x must be >= 0")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         elif type(value) is not int:
             raise TypeError("x must be an integer")
         else:
             self.__x = value
-
-
 
     @property
     def y(self):
@@ -85,7 +80,6 @@ class Rectangle(Base):
         else:
             self.__y = value
 
-
     def area(self):
         """Return area"""
         return self.width * self.height
@@ -96,17 +90,14 @@ class Rectangle(Base):
         for n in range(self.height):
             print(' ' * self.x + "#" * self.width)
 
-
     def __str__(self):
         """Overriding the __str__ method"""
-        return ("[{}] ({}) {}/{} - {}/{}".format\
-(Rectangle.__name__, self.id, self.x, self.y, self.width, self.height))
-
-
+        return("[{}] ({}) {}/{} - {}/{}"
+               .format(Rectangle.__name__, self.id, self.x,
+                       self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """update class and assign arguments"""
-
         i = 0
         for idx in args:
             i += 1
