@@ -10,3 +10,13 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ saving csv"""
+        pass
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ csv file derserialze"""
+        pass
