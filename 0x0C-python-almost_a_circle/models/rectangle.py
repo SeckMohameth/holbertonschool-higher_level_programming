@@ -6,12 +6,14 @@ class Rectangle(Base):
     """Rectanle class
 
     Args:
+    width
 
     Raises:
 
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """init method to set attributes """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -20,10 +22,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ width getter """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ width setter """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -35,10 +39,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ height getter """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """height setter """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -50,12 +56,13 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ getter for x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        """ setter for x"""
+        if value < 0            raise ValueError("x must be >= 0")
         elif type(value) is not int:
             raise TypeError("x must be an integer")
         else:
@@ -84,21 +91,21 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        "Changing the display for #"
+        """Changing the display for #"""
         print('\n' * self.y, end='')
         for n in range(self.height):
             print(' ' * self.x + "#" * self.width)
 
 
     def __str__(self):
-        "Overriding the __str__ method"
+        """Overriding the __str__ method"""
         return ("[{}] ({}) {}/{} - {}/{}".format\
 (Rectangle.__name__, self.id, self.x, self.y, self.width, self.height))
 
 
 
     def update(self, *args, **kwargs):
-        "update class and assign arguments"
+        """update class and assign arguments"""
 
         i = 0
         for idx in args:
