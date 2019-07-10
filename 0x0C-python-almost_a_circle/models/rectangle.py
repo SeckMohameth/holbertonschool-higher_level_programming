@@ -99,15 +99,28 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """update class and assign arguments"""
         i = 0
-        for idx in args:
-            i += 1
-            if i == 1:
-                self.id = idx
-            if i == 2:
-                self.width = idx
-            if i == 3:
-                self.height = idx
-            if i == 4:
-                self.x = idx
-            if i == 5:
-                self.y = idx
+        if len(args) > 0:
+            for idx in args:
+                i += 1
+                if i == 1:
+                    self.id = idx
+                if i == 2:
+                    self.width = idx
+                if i == 3:
+                    self.height = idx
+                if i == 4:
+                    self.x = idx
+                if i == 5:
+                    self.y = idx
+        else:
+            for key, val in kwargs.items():
+                if key == 'id':
+                    self.id = val
+                if key == 'width':
+                    self.width = val
+                if key == 'height':
+                    self.height =val
+                if key == 'x':
+                    self.x = val
+                if key == 'y':
+                    self.y = val
