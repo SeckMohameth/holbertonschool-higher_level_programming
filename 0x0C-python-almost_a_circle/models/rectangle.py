@@ -119,7 +119,7 @@ class Rectangle(Base):
                 if key == 'width':
                     self.width = val
                 if key == 'height':
-                    self.height =val
+                    self.height = val
                 if key == 'x':
                     self.x = val
                 if key == 'y':
