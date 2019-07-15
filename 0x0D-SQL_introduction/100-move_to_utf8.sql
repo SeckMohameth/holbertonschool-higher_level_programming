@@ -2,5 +2,5 @@
 ALTER DATABASE hbtn_0c_0 CHARACTER SET UTF8 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE second_table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-ALTER TABLE second_table change name nameVARCHAR(256) CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_\
+ALTER TABLE second_table change name name VARCHAR(256) CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_\
  ci;
