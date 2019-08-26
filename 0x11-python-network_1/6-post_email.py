@@ -2,8 +2,6 @@
 import requests
 import sys
 if __name__ == "__main__":
-    url = sys.argv[1]
-    email_address = sys.argv[2]
-    mail = {'email': email_address}
-    mine = requests.post(url, data=email_address)
+    mail = {'email': sys.argv[2]}
+    mine = requests.post(sys.argv[1], data=mail)
     print("{}".format(mine.text))
