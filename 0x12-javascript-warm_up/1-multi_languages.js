@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-console.log("C is fun");
+let array = ["C is fun", "Python is cool", "Javascript is amazing"]
 
-console.log("Python is cool");
-
-console.log("Javascript is amazing");
+for (let x = 0; x < array.length; x++){
+    console.log(array[x]);
+}
