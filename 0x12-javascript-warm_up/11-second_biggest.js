@@ -1,8 +1,9 @@
 #!/usr/bin/node
 
-const args = process.argv;
+let args = process.argv;
 args.splice(0, 2);
 let second = 0;
+
 
 if (args.length <= 3) {
   console.log('0');
